@@ -1,7 +1,1 @@
-{
-  "hosting": {
-    "public": ".",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "README.md"],
-    "rewrites": [{ "source": "**", "destination": "/index.html" }]
-  }
-}
+{"hosting":{"public":".","ignore":["firebase.json","**/.*","**/node_modules/**","README.md","ANIMATION_BRIEF.md","qa/**","assets/*.b64","*.zip"],"headers":[{"source":"**/*.webp","headers":[{"key":"Cache-Control","value":"public,max-age=3600"}]}]}}
