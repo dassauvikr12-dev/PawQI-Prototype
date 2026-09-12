@@ -1,40 +1,49 @@
-# PawQi - feature-first journey website
+# PawQi - the little things, together
 
-The default homepage now markets PawQi's product journey, not its avatar technology.
+Customer-story website refresh, 12 September 2026.
 
-## Experience
+**Live preview:** https://dassauvikr12-dev.github.io/PawQI-Prototype/
 
-1. Know your pet: profile, Pet Match Advisor, Reality Check and Medical Vault.
-2. Plan their day: Pet Command Center, Health Plan, Training Coach, Nutrition Routine and Grooming Plan.
-3. Find care: Vet Connect, groomers, trainers, sitters, day care, walking and boarding discovery.
-4. Share their life: Pet Life Journal and the planned Community and Events Hub.
-5. Look ahead: travel, civic tasks, insurance, emergency, lost-pet preparation, guardian planning, adoption, reproductive records, nutrition marketplace and legacy preparation.
+The homepage now leads with the pet parent's experience rather than a feature catalogue: scattered information, a simpler day, the help they need, and more life together. It is a public product preview, not the production PawQi care application.
 
-Milo is the default small website assistant. A dismissible initial welcome introduces him. Scrolling changes a short contextual help label; it never opens a dialog or moves the page. Selecting Cats at the start of the journey switches the assistant to Mili; other explicit species choices select Nemo, Mithu, Popi or Tiku. There is no avatar gallery, hero character stage, autoplay voice or animation-control showcase.
+## What to review
 
-The experimental `avatar.js` and previous animation brief remain archived in the repository; the current page deliberately does not load them. The small portraits are 3D-style rendered images, not new talking-video animation.
+- The new opening: **Less keeping track. More being together.**
+- **Bring it together:** scattered notes become one sample pet profile; click again to reverse.
+- **Watch the story:** six animated web scenes, persistent captions, a transcript, scene navigation, play/pause and optional browser narration.
+- **Luna's sample day:** open sample records, complete/reset tasks, and favourite a sample journal memory.
+- Illustrated service cards with beta handoff and explicitly external Maps searches.
+- All 26 product-plan pathways remain searchable under **All features**, including development and release boundaries.
+- Milo is a compact, dismissible dog guide. Explicit species selection switches to Mili, Nemo, Mithu, Popi or Tiku, with matching colours, images and sample context.
+- Emergency remains top-right, with no login required for the external search.
 
-## Files and run
+## Run and publish
 
-The active page loads `journey.css?v=journey-1` and `journey.js?v=journey-1`, plus the six existing WebP portraits. It is a static website with no build step. Use GitHub Pages main / (root), or a local static server. Relative asset paths work under /PawQI-Prototype/. Firebase configuration alone does not publish a Firebase site.
+The active page uses `index.html`, `story.css`, `story-features.js`, `story.js`, `favicon.svg` and the existing local artwork under `assets/`. No build step, API key or package installation is required.
 
-## Working website interactions
+GitHub Pages publishes the repository's `main` branch from `/(root)`. Asset paths are relative so the site works under `/PawQI-Prototype/`. The Firebase configuration is retained but does not independently deploy a Firebase project. Earlier journey/animation source files remain in Git history and in the repository; the new homepage does not load them.
 
-- Chapter navigation, next-chapter links and reading progress.
-- Explicit species selection with a compact companion handoff.
-- Sample care tasks, reset, and keyboard-accessible dashboard tabs.
-- Service-category selection and meaningful product detail dialogs.
-- Searchable feature catalogue with development/release boundaries.
-- Optional scripted companion dialog that routes questions to the appropriate feature.
-- Top-right no-login emergency search (external Google Maps, not PawQi-verified).
-- Mobile menu, native dialog keyboard handling, focus indicators and reduced-motion support.
+For local testing, serve this folder with an ordinary static HTTP server, for example `python -m http.server 8000`.
 
-## Product truthfulness
+## Content and product boundaries
 
-Content follows the owner-provided feature plan and the original SIFFY v4 product journey. Feature names and status details are mapped in JOURNEY_FEATURE_MAP.md. The public page differentiates beta-tested foundations from gated recommendations and public services. It does not expose the internal workbooks, budgets, personal pet records or credentials.
+The narrative is adapted from the brand story supplied by the owner on 12 September 2026. Product terminology and status descriptions are retained from the supplied PawQi feature plan and existing feature map; recorded development updates extend through 7 September 2026. A development-verified foundation is not a public-production availability guarantee.
 
-The beta links point to the development URL supplied by the project owner, not a verified production application. Private profiles, saved plans and records require the beta's sign-in. Website questions and example tasks remain in page memory; no generative AI, record upload, checkout, appointment confirmation, medical diagnosis, dose calculation or emergency dispatch is implemented here. External service search results require independent verification. No microphone or analytics is used by this page.
+Luna is fictional. The illustrations are approved generated project artwork, not customer photographs or endorsements. No competitor artwork is copied and no external image or font CDN is required.
 
-## Checks for this change
+The assistant is a scripted website guide, not live AI. The walkthrough is animated HTML/CSS, not a recorded cinematic film, rigged talking avatar or phoneme-synchronised animation. Narration is off by default and only the fixed story script is spoken after a user opts in. Voice availability and quality depend on the browser/device; some device voices may use an online speech service. Captions and the transcript remain available if narration cannot start.
 
-Node JavaScript syntax check passed. An offline Chromium fixture of the same HTML, CSS, JavaScript and WebP bytes exercised species switches, all service selections, catalogue filtering, task completion/reset, keyboard tabs, assistant navigation, emergency query encoding, literal rendering of user text and the mobile menu. Zero horizontal document overflow was observed at 320, 390, 650, 768, 1024 and 1440 px. All six portraits decoded. The sandbox browser blocked localhost navigation; the fixture is not a claim of live end-to-end browser testing. Deployment status should be checked separately after the commit.
+No microphone, analytics, persistent visitor data, account creation, record upload, payment, appointment confirmation or emergency dispatch is provided here. Sample tasks and questions remain in page memory. External search results are not PawQi-verified; visitors must confirm qualifications, opening hours, availability and species suitability. Private records belong in the separate signed-in beta. Production terms, privacy notices, AI, providers and transactional services require their own integration and release approval.
+
+## Validation
+
+- Node syntax checks passed for both active JavaScript files.
+- 153 local automated assertions passed, with zero JavaScript errors in the tested fixture.
+- Checks covered all six species, all 26 feature details, sample records/tasks/reset, catalogue search/empty state, service/emergency routing, encoded external queries, literal rendering of user input, keyboard tabs, mobile navigation, and the visual-story controls.
+- No horizontal document overflow was observed at widths 320, 360, 390, 600, 768, 1024 and 1440 pixels.
+- All required local image references exist and WebP files decode.
+- Browser speech lifecycle was tested with a stub. Actual voice quality has not been listening-tested on visitors' devices.
+
+The browser tests used an offline Chromium inline fixture containing the same HTML, CSS, JavaScript and image bytes because this environment blocks local URL navigation. These are not hosted end-to-end browser tests. Deployment is verified separately using GitHub Actions. Source blob hashes are compared before publication.
+
+See `STORY_UPDATE.md` for the content strategy and the short walkthrough script.
