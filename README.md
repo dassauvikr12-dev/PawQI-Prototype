@@ -1,49 +1,45 @@
-# PawQi - the little things, together
+# PawQi - Less keeping track. More being together.
 
-Customer-story website refresh, 12 September 2026.
+Public customer-story website preview, visually refined on 12 September 2026.
 
-**Live preview:** https://dassauvikr12-dev.github.io/PawQI-Prototype/
+Preview URL: https://dassauvikr12-dev.github.io/PawQI-Prototype/
 
-The homepage now leads with the pet parent's experience rather than a feature catalogue: scattered information, a simpler day, the help they need, and more life together. It is a public product preview, not the production PawQi care application.
+## Current experience
 
-## What to review
+The page follows the pet parent's experience: scattered information, an organised sample profile, a clearer sample day, relevant care services and the moments in between. The latest refinement changes typography, composition, imagery and call-to-action hierarchy without replacing the story or feature catalogue.
 
-- The new opening: **Less keeping track. More being together.**
-- **Bring it together:** scattered notes become one sample pet profile; click again to reverse.
-- **Watch the story:** six animated web scenes, persistent captions, a transcript, scene navigation, play/pause and optional browser narration.
-- **Luna's sample day:** open sample records, complete/reset tasks, and favourite a sample journal memory.
-- Illustrated service cards with beta handoff and explicitly external Maps searches.
-- All 26 product-plan pathways remain searchable under **All features**, including development and release boundaries.
-- Milo is a compact, dismissible dog guide. Explicit species selection switches to Mili, Nemo, Mithu, Popi or Tiku, with matching colours, images and sample context.
-- Emergency remains top-right, with no login required for the external search.
+- Consistent Inter-based typography and a restrained cream/green palette.
+- Pet-parent hero illustration, a compact interactive-sample card and direct starting points.
+- Bring it together demonstration, sample records/tasks/journal, feature search and service detail dialogs.
+- Six-scene visual walkthrough with captions, transcript, playback controls and optional browser narration.
+- All 26 product-plan feature and partner pathways retained, with their development/release boundaries.
+- Milo as a compact supporting dog guide. Explicit species selection introduces Mili, Nemo, Mithu, Popi or Tiku and updates the imagery.
+- Top-right no-login external emergency-vet search.
 
-## Run and publish
+## Active files
 
-The active page uses `index.html`, `story.css`, `story-features.js`, `story.js`, `favicon.svg` and the existing local artwork under `assets/`. No build step, API key or package installation is required.
+index.html loads story.css, story-features.js, story.js, refinement.css and refinement.js. The images are stored locally under assets/. The page needs no build step, API key or package installation. Relative paths support the GitHub Pages /PawQI-Prototype/ subdirectory.
 
-GitHub Pages publishes the repository's `main` branch from `/(root)`. Asset paths are relative so the site works under `/PawQI-Prototype/`. The Firebase configuration is retained but does not independently deploy a Firebase project. Earlier journey/animation source files remain in Git history and in the repository; the new homepage does not load them.
+GitHub Pages is configured to publish main from the repository root. Firebase configuration is retained but does not deploy a Firebase project by itself. Earlier journey and animation experiments remain in the repository but are not loaded by the current homepage.
 
-For local testing, serve this folder with an ordinary static HTTP server, for example `python -m http.server 8000`.
+## Typography and images
 
-## Content and product boundaries
+Inter is requested through the Google Fonts CSS API with display=swap and a system-font fallback. Font binaries are not included. Google Fonts is a third-party request; the previous entirely-local-font statement no longer applies.
 
-The narrative is adapted from the brand story supplied by the owner on 12 September 2026. Product terminology and status descriptions are retained from the supplied PawQi feature plan and existing feature map; recorded development updates extend through 7 September 2026. A development-verified foundation is not a public-production availability guarantee.
+Visuals are generated project artwork. The new pet-parent and service scenes are individual crops from concept artwork, not photographs of customers/providers, testimonials, cinematic video or rigged character animation. Existing species artwork is retained where appropriate. Native raster resolution remains finite. No invented testimonials, counts, health scores or availability guarantees from the generated mockups are included.
 
-Luna is fictional. The illustrations are approved generated project artwork, not customer photographs or endorsements. No competitor artwork is copied and no external image or font CDN is required.
+## Product and privacy boundaries
 
-The assistant is a scripted website guide, not live AI. The walkthrough is animated HTML/CSS, not a recorded cinematic film, rigged talking avatar or phoneme-synchronised animation. Narration is off by default and only the fixed story script is spoken after a user opts in. Voice availability and quality depend on the browser/device; some device voices may use an online speech service. Captions and the transcript remain available if narration cannot start.
+The underlying feature content retains the owner's plan and release gates; recorded development updates extend through 7 September 2026. Development verification is not a production-availability guarantee. Internal workbooks and private records are not published.
 
-No microphone, analytics, persistent visitor data, account creation, record upload, payment, appointment confirmation or emergency dispatch is provided here. Sample tasks and questions remain in page memory. External search results are not PawQi-verified; visitors must confirm qualifications, opening hours, availability and species suitability. Private records belong in the separate signed-in beta. Production terms, privacy notices, AI, providers and transactional services require their own integration and release approval.
+Luna is fictional. Website questions and sample tasks remain in page memory. The assistant is scripted, not live generative AI or a veterinarian. No microphone, record upload, persistent account, real booking, payment, diagnosis, dose calculation or emergency dispatch is implemented on this public site.
 
-## Validation
+The optional walkthrough speaks its fixed script using browser/device speech after opt-in. Sound starts off; captions and the transcript remain available. Voice support and quality vary, and some device voices can use an online service. The separate beta link still opens the development application supplied by the owner. External Maps results are not PawQi-verified; visitors must confirm suitability and opening hours.
 
-- Node syntax checks passed for both active JavaScript files.
-- 153 local automated assertions passed, with zero JavaScript errors in the tested fixture.
-- Checks covered all six species, all 26 feature details, sample records/tasks/reset, catalogue search/empty state, service/emergency routing, encoded external queries, literal rendering of user input, keyboard tabs, mobile navigation, and the visual-story controls.
-- No horizontal document overflow was observed at widths 320, 360, 390, 600, 768, 1024 and 1440 pixels.
-- All required local image references exist and WebP files decode.
-- Browser speech lifecycle was tested with a stub. Actual voice quality has not been listening-tested on visitors' devices.
+## Latest validation
 
-The browser tests used an offline Chromium inline fixture containing the same HTML, CSS, JavaScript and image bytes because this environment blocks local URL navigation. These are not hosted end-to-end browser tests. Deployment is verified separately using GitHub Actions. Source blob hashes are compared before publication.
+75 local Chromium fixture checks passed: all six species, nine screen widths from 320 to 1440 px, image decoding, emergency visibility, sample records/tasks/reset/favourite, representative catalogue entries, all four service dialogs, six story scenes, literal user-input rendering and mobile navigation. No JavaScript exceptions or document overflow were observed. Node syntax checks passed.
 
-See `STORY_UPDATE.md` for the content strategy and the short walkthrough script.
+The fixture uses the actual HTML/CSS/JavaScript/image bytes with locally installed Inter. It is not a hosted-device end-to-end test, a validation of external font delivery on every browser, or a human listening test of speech quality. Deployment status is checked separately. Earlier testing notes belong to their respective revisions.
+
+See REFINEMENT.md for this visual update and STORY_UPDATE.md for the original storyboard.
