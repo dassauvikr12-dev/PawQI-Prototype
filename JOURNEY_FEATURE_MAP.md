@@ -1,8 +1,10 @@
-# Journey design and feature traceability
+# Customer-story design and feature traceability
 
-Basis: owner-supplied `PawQi Product Fetures Plan.xlsx`, sheet `Special Features of PawQi for C`, and `SIFFY-v4-Complete (1).html`. This document maps product labels only; internal source files are not published. The product plan contains development updates through 7 September 2026; deployment availability must not be inferred from the word "verified" alone.
+Updated 12 September 2026. Basis: owner-supplied `PawQi Product Fetures Plan.xlsx`, sheet `Special Features of PawQi for C`, the original `SIFFY-v4-Complete (1).html`, and the owner's brand narrative supplied on 12 September. Internal source workbooks and private data are not published. Recorded product-development updates extend through 7 September 2026; development verification is not public-production availability.
 
-| Journey chapter | Feature-plan rows | Content retained |
+## Source feature groups retained
+
+| Product group | Feature-plan rows | Content retained |
 | --- | --- | --- |
 | Know your pet | 3, 4, 13 | Pet Match Advisor; Pet Reality Check; Pet Medical Vault |
 | Plan their day | 5-8, 20-21 | Training Coach; Pet Health Plan; Pet Grooming Plan; Nutrition Routine; Pet Command Center; Health Intelligence / Health Graph |
@@ -10,8 +12,20 @@ Basis: owner-supplied `PawQi Product Fetures Plan.xlsx`, sheet `Special Features
 | Share their life | 10, 14, 18 | Pet Community; Pet Life Journal; Pet Events Hub |
 | Look ahead | 9, 11-12, 15-16, 19, 24-27 | Emergency; Lost & Found; Civic Assistant; Insurance; Legacy; Nutrition Marketplace; Guardian Plan; Pre/Post Pregnancy; Adoption; Travel |
 
-Website interpretation: these features are grouped into five sequential chapters with an explicit next-step bridge. This grouping is a UX proposal, not a claim that the workbook uses this five-chapter organization. The HTML prototype supplies the profile / assessment / veterinary-review / daily-care context; later workbook safety and release statuses prevent old illustrative health scores, dose calculators and automatic record sharing from being marketed as live features.
+These are the earlier website's organizational groups, not a claim about workbook chapter names. The complete catalogue retains the 25 customer capabilities plus the partner pathway. Detailed descriptions and development boundaries are in `story-features.js`.
 
-No-login website tools: reading product explanations, searching features, trying the in-memory dashboard and opening external emergency-vet search. These are website-level previews, not newly granted guest access to private beta records. Provider access, public community, real events, clinical guidance and transactional fulfilment retain their documented gates.
+## New public storytelling layer
 
-Assistant behavior follows the owner's latest direction: Milo welcomes the visitor and supports the dog journey; Mili appears only after explicit entry into Cats. The same rule applies to the other species. Character media does not occupy a homepage section or interrupt scrolling. Previous animation experiments remain separate from this product-first page.
+The homepage now starts with the customer's everyday experience rather than the group labels. The owner-approved narrative is interpreted as: recognizable scattered records and dates -> bring them together -> try a sample day -> explore relevant care -> enjoy and remember life together -> continue into the development beta.
+
+`#story` introduces the problem and a reversible visual demonstration. `#try` offers Records, Day and Moments sample tabs, together with the daily-care feature links. `#services` introduces the four illustrated care pathways. `#life` shows the Life Journal and planned community. `#future` offers wider preparation features. All other feature details remain available through All features. This is marketing structure, not a new functionality or release-status claim.
+
+The prototype supplies the original profile / assessment / veterinary-review / daily-care ideology. Later workbook boundaries take precedence over old illustrative health scores, generic dose calculations, automatic record-sharing claims and claims of public availability.
+
+## Guest access and assistants
+
+No-login tools on this website are product explanations, a searchable feature catalogue, the in-memory sample dashboard, the optional captioned/narrated visual story, and clearly labelled external care/emergency searches. They do not grant access to private beta records. Provider access, public community, real events, clinical guidance and transactional fulfilment retain their documented gates.
+
+Milo is the compact default dog guide. Cats explicitly select Mili; Fish select Nemo, Birds select Mithu, Rabbits select Popi and Small pets select Tiku. Scrolling never changes the chosen species or opens an unsolicited dialog. Luna is a fictional sample pet, distinct from the assistant characters. No pet files are transferred by switching species.
+
+Narration is optional browser/device speech of the fixed story script, not live AI or cinematic character video. The previous avatar experiment is not loaded by the current homepage. See `STORY_UPDATE.md` and `README.md` for scope and validation details.
